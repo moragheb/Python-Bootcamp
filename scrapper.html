@@ -1,0 +1,96 @@
+#<!--
+not started match
+-->
+
+<div class="event__match event__match--scheduled event__match--twoLine" id="g_2_KYlHr35I" title="Click for match detail!">
+	<div class="event__check"></div><div class="event__time">20:00</div>
+	<div class="event__participant event__participant--home">Ebden M. (Aus)</div>
+	<div class="event__participant event__participant--away">Tomic B. (Aus)</div>
+	<div class="event__score event__score--home">-</div>
+	<div class="event__score event__score--away">-</div>
+</div>
+
+#<!--
+completed match
+-->
+
+
+<div id="g_2_I5nmMlhl" title="Click for match detail!" class="event__match event__match--twoLine">
+	<div class="event__check" title="Add this game to My Games!"></div>
+	<div class="event__stage">Finished</div>
+	<div class="event__participant event__participant--home">Isner J. (Usa)</div>
+	<div class="event__participant event__participant--away fontBold">Opelka R. (Usa)</div>
+	<div class="event__score event__score--home">1</div>
+	<div class="event__score event__score--away">2</div>
+	<div class="event__part event__part--home event__part--1">6<sup class="event__part--ex">2</sup></div>
+	<div class="event__part event__part--away event__part--1">7<sup class="event__part--ex">7</sup></div>
+	<div class="event__part event__part--home event__part--2">7<sup class="event__part--ex">7</sup></div>
+	<div class="event__part event__part--away event__part--2">6<sup class="event__part--ex">5</sup></div>
+	<div class="event__part event__part--home event__part--3">6<sup class="event__part--ex">5</sup></div>
+	<div class="event__part event__part--away event__part--3">7<sup class="event__part--ex">7</sup></div>
+</div>
+
+
+#<!--
+in progress match
+-->
+
+
+<div id="g_2_tM2GPeeB" title="Click for match detail!" class="event__match event__match--live event__match--twoLine">
+	<div class="event__check">
+	</div><div class="event__stage">Set 1</div>
+	<div class="event__service event__service--away icon icon--tennis"></div>
+	<div class="event__participant event__participant--home">Evans D./Thompson J.</div>
+	<div class="event__participant event__participant--away">Sock J./Withrow J.</div>
+	<div class="event__score event__score--home">0</div><div class="event__score event__score--away">0</div>
+	<div class="event__part event__part--home event__part--1">4</div>
+	<div class="event__part event__part--away event__part--1">3</div>
+	<div class="event__part event__part--home event__part--6">0</div>
+	<div class="event__part event__part--away highlighted event__part--6">15</div>
+</div>
+
+
+
+<script type="text/javascript">
+	let resizeTimer;
+
+	function menuLayout() {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function () {
+			manageTopAndMinorityItems()
+		}, 100);
+	}
+
+	function manageTopAndMinorityItems(){
+		let menuPositionTop = $(".menuTop__content").offset().top;
+		$(".menuTop__item").each(function(){
+			let itemTopPosition = $(this).offset().top;
+			if(menuPositionTop === itemTopPosition){
+				setItemVisibility($(this).attr("data-sport-id"), true);
+			}else{
+				setItemVisibility($(this).attr("data-sport-id"), false);
+			}
+		});
+	}
+
+	function setItemVisibility(id, state){
+		let selector = "body .menuMinority__item[data-sport-id=\""+ id +"\"]";
+		let className = "menuMinority__item--hidden";
+		if(state){
+			$(selector).addClass(className);
+		}else{
+			$(selector).removeClass(className);
+		}
+	}
+
+	$(document).ready(function () {
+		menuLayout();
+	});
+
+
+	<div class="calendar"><div class="calendar__nav" title="Previous day"><div class="calendar__direction calendar__direction--yesterday"></div></div><div class="calendar__datepicker"><div class="icon icon--calendar"></div>25/07 Th</div><div class="calendar__nav" title="Next day"><div class="calendar__direction calendar__direction--tomorrow"></div></div></div>
+
+
+
+	<div class="event__match event__match--scheduled event__match--twoLine" id="g_2_C6WcOO3m" title="Click for match detail!"><div class="event__check"></div><div class="event__time">02:10<span class="icon icon--preview"></span></div><div class="event__service event__service--away icon icon--tennis"></div><div class="event__participant event__participant--home">Gunneswaran P. (Ind)</div><div class="event__participant event__participant--away">Millman J. (Aus)</div><div class="event__score event__score--home">-</div><div class="event__score event__score--away">-</div>
+	</div>

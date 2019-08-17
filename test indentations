@@ -1,0 +1,46 @@
+def newgame():
+
+availablepos=[1,2,3,4,5,6,7,8,9]
+reset()
+Printboard()
+while  not Victory :
+    if len(availablepos)==0:
+        print("dead lock")
+        reset()
+        break
+    if playturn==0:
+       pos= int(input(f"player 1: please select a position between 1 and 9 to play your X     "))
+       if(pos not in  range(1,10)):
+                 pass
+       if pos in availablepos:
+            availablepos.remove(pos)
+            Printboard("X",pos)
+            playturn=1
+            if CheckVictory():
+                print (" player 1 you are winner")
+                victory = True
+                break
+            pass
+       else:
+             print("Already Taken")
+             pass
+            
+       
+    elif playturn==1:
+        pos= int(input(f"player 2: please select a position between 1 and 9 to play your Y     "))
+        if(pos not in  range(1,10)):
+                 pass
+        if pos in availablepos:
+            availablepos.remove(pos)
+            Printboard("Y",pos)
+            playturn=0
+            if CheckVictory():
+                print  (" player 2 you are winner")
+                victory = True
+                break
+            
+            pass
+        else:
+             print("Already Taken")
+             pass
+        pass
